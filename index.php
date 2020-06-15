@@ -22,6 +22,15 @@
                     </div>
                     <button type="submit" class="btn btn-primary">Submit</button>
                 </form>
+                <?php
+                    if(isset($_GET['id'])){
+                        if($_GET['id'] == 2 ){
+                            echo "<br>";
+                            echo "<p style='color:red'>Verkeerde naam en/of wachtwoord</p>";
+                        }
+                    }
+
+                    ?>
             </div>
         </div>
     </div>

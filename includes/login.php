@@ -9,16 +9,13 @@ if(isset($_POST['username'])){
     $result = $sql->fetch();
 }else{
     $result = false;
-    echo $_POST['username'];
-    echo $_POST['password'];
-
-    echo "jemoeder";
 }
 
 if($result){
     $_SESSION['username'] = $_POST['username'];
     header('Location: ../home.php' );
 }else{
-    header('Location: ../index.php' );
+    $_SESSION['error'] = 'error';
+    header('Location: ../index.php?id=2' );
 }
 ?>
